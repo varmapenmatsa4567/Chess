@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d1b17;
+}
+
+.game {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+}
+
+h1, h2 {
+    color: white;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.cell {
+    width: 85px;
+    height: 85px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: transparent;
+    cursor: pointer;
+}
+
+.cell:hover img {
+    width: 80px;
+    height: 80px;
+}
+
+img {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    transition-duration: 0.3s;
+}
+
+@media only screen and (max-width: 700px) {
+    .cell {
+        width: calc(100vw / 8);
+        height: calc(100vw / 8);
+    }
+    img {
+        width: calc(100vw / 8 - 3vw);
+        height: calc(100vw / 8 - 3vw);
+    }
+    .circle {
+        width: 15px;
+        height: 15px;
+    }
+    .cell:hover img {
+        width: 55px;
+        height: 55px;
+    }
+}
